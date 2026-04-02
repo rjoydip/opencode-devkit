@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "preserve",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "lib": ["es2023"],
+    "outDir": "./dist",
+    "rootDir": ".",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "types": ["node"]
+  },
+  "include": ["plugins/**/*.ts", "tools/**/*.ts", "index.ts", "commands/**/*.md", "rules/**/*.md", "agents/**/*.md", "*.ts", "*.json"],
+  "exclude": ["node_modules", "dist"]
+}

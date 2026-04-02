@@ -1,0 +1,84 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "build",
+  "skills": {
+    "paths": [".agents/skills", ".pi/skills"],
+    "urls": ["https://skills.sh/"]
+  },
+  "plugin": [
+    "./plugins",
+    "@franlol/opencode-md-table-formatter@latest",
+    "opencode-helicone-session",
+    "opencode-pty",
+    "opencode-vibeguard"
+  ],
+  "permission": {
+    "skill": {
+      "*": "allow",
+      "pr-review": "allow",
+      "internal-*": "deny",
+      "experimental-*": "ask"
+    }
+  },
+  "instructions": ["AGENTS.md"],
+  "mcp": {
+    "filesystem": {
+      "type": "local",
+      "command": ["bunx", "-y", "@modelcontextprotocol/server-filesystem", "."]
+    },
+    "sqlite": {
+      "type": "local",
+      "command": ["bunx", "-y", "sqlite-mcp-server"]
+    }
+  },
+  "lsp": {
+    "typescript": {
+      "command": ["typescript-language-server"],
+      "extensions": [".ts", ".tsx", ".js", ".jsx"]
+    },
+    "json": {
+      "command": ["vscode-json-languageserver"],
+      "extensions": [".json"]
+    },
+    "tailwindcss": {
+      "command": ["tailwindcss-language-server"],
+      "extensions": [".css", ".html"]
+    },
+    "html": {
+      "command": ["vscode-html-languageserver"],
+      "extensions": [".html", "htm"]
+    },
+    "css": {
+      "command": ["vscode-css-languageserver"],
+      "extensions": [".css"]
+    },
+    "yaml": {
+      "command": ["yaml-language-server"],
+      "extensions": [".yml", ".yaml"]
+    }
+  },
+  "agent": {
+    "build": {
+      "description": "Default primary agent for development work",
+      "mode": "primary",
+      "model": "opencode/minimax-m2.5-free"
+    },
+    "secondary": {
+      "description": "Fallback model when primary is unavailable",
+      "mode": "primary",
+      "model": "opencode/mimo-v2-omni-free"
+    },
+    "mimo-pro": {
+      "description": "Specialized subagent for complex tasks",
+      "mode": "subagent",
+      "model": "opencode/mimo-v2-pro-free"
+    },
+    "nemotron": {
+      "description": "Subagent with fallback capability for reasoning tasks",
+      "mode": "subagent",
+      "model": "opencode/nemotron-3-super-free"
+    }
+  },
+  "model": "opencode/minimax-m2.5-free",
+  "small_model": "opencode/mimo-v2-omni-free"
+}

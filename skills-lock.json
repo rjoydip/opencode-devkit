@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "computedHash": "2e4e5f287312022d491b5465ec9511638253b4e872109d083dcde117b5caaa3d"
+    },
+    "api-design": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "computedHash": "cd8dad9f9cf4eae8632a3969cd12f4e9ad1f9d58a9ed607c2d9ce51876d6dd13"
+    },
+    "backend-patterns": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "computedHash": "4872c9e2d4b474620f350c5bc625f7d34fc4a4fa5cfa2ff90637ee8b3f4ca143"
+    },
+    "better-auth-best-practices": {
+      "source": "better-auth/skills",
+      "sourceType": "github",
+      "computedHash": "9ab075b5061be2a5f299c10505667345cc1ec76e8de4120901cfd586643e776f"
+    },
+    "better-auth-security-best-practices": {
+      "source": "better-auth/skills",
+      "sourceType": "github",
+      "computedHash": "ed38caef4b297cc399d717258d6ea4e6ecb8894c453c83450064c7e7c6e5cc02"
+    },
+    "brainstorming": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "computedHash": "f483c304fcde060211ffae00f49bb728536e7e7613c99db45b5b924d9fc17243"
+    },
+    "bun-runtime": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "computedHash": "5e8627ece37efa7f9ea4fdd7360ef95ad8bce4ce92ae8afd90a27347df1b6f9c"
+    },
+    "chrome-devtools": {
+      "source": "chromedevtools/chrome-devtools-mcp",
+      "sourceType": "github",
+      "computedHash": "9bf87c1640e0d5ff76bdaabeb9d66ae00f526e72f9a5c3a010062a4e7d31626e"
+    },
+    "coding-standards": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "computedHash": "ee931407b246fbc4c2316b0e6a982666b58b312db908f3a556890afcad18e9df"
+    },
+    "create-auth-skill": {
+      "source": "better-auth/skills",
+      "sourceType": "github",
+      "computedHash": "393e8d2d795fa5797c9a4e0665f29183ea2e140233db59746d510340a10456e6"
+    },
+    "dispatching-parallel-agents": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "computedHash": "e21044ae7496fc285f1df9ff3fb518a3a20bea6f5216c1f59f4987e12c769a0a"
+    },
+    "e2e-testing": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "computedHash": "8e3ac8d268f7ccd4994fa3368e551df13fa48f489674ed57a6c764bcb31b7d00"
+    },
+    "e2e-testing-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "3425e335940b8f1f4881452603252385f9119159632dc211bc8c8a375f4619cd"
+    },
+    "email-and-password-best-practices": {
+      "source": "better-auth/skills",
+      "sourceType": "github",
+      "computedHash": "7786d722fa682b3d6a99793e73a9d51b59becefa595676134a993020633e068f"
+    },
+    "executing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "computedHash": "2f709d1a2c7564f8ce6a9bb707e7f5451117ba80f8e8e2302662c29bc61246a6"
+    },
+    "expect": {
+      "source": "millionco/expect",
+      "sourceType": "github",
+      "computedHash": "be066bc66b779d39887448479bf4e46e55039b607358d32651661dd80d6f0efd"
+    },
+    "finishing-a-development-branch": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "computedHash": "9edba9a38684c060fdc38290f640e1dc0c37de286723ac9be73bacacf7cd6f3d"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "516bd2154eb843a8240e43d5b285229129853114ad7075a5e141e1c08e408c84"
+    },
+    "frontend-patterns": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "computedHash": "4c2920da9aef340538f2d579f465fd99c5b679d4afa0daba775215c0e506d0b1"
+    },
+    "git-workflow": {
+      "source": "agno-agi/agno",
+      "sourceType": "github",
+      "computedHash": "29dc77199602a2528c9c75d47b13e365f394467b67a0b81aeff83c068ef8892b"
+    },
+    "mcp-server-patterns": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "computedHash": "83a3d8d28fe6c24b8afccd483166d05bb2b5423e0cb6155bf2f0ab230b27eeff"
+    },
+    "nodejs-backend-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "3d6cbc12f720d8f02e1936c3e7fab78245eaa69500edbceea93d493d4ece6094"
+    },
+    "organization-best-practices": {
+      "source": "better-auth/skills",
+      "sourceType": "github",
+      "computedHash": "fa7a76e45a1f9632e6d63e92b476cf566e64f6e93a2c8ee00bc77b4a74008fbd"
+    },
+    "performance": {
+      "source": "local",
+      "sourceType": "local",
+      "computedHash": "local"
+    },
+    "python-performance-optimization": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "6390615b25e5922057b15eb900d69a90db563c5f2d6bd3182be707592fc25f09"
+    },
+    "receiving-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "computedHash": "2760c85d4f4117b0006e7ba755f4bbd61f8f4c185f347999763c97f507274e30"
+    },
+    "requesting-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "computedHash": "246e65cd72a7e360987d94e6c61564ce6d71c6361d1784d529d70e4cbbe8522d"
+    },
+    "security": {
+      "source": "local",
+      "sourceType": "local",
+      "computedHash": "local"
+    },
+    "shadcn": {
+      "source": "shadcn/ui",
+      "sourceType": "github",
+      "computedHash": "77faba608ea949351d1757e29e6cb726f6ec5937f7595be0593038a7d2d76bb9"
+    },
+    "shell-commands": {
+      "source": "local",
+      "sourceType": "local",
+      "computedHash": "local"
+    },
+    "subagent-driven-development": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "computedHash": "a197f8e5fba5ea59013e1adbaa90dd42db35de8f074feca200c8038de584a83b"
+    },
+    "systematic-debugging": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "computedHash": "72e9ab72627e4fd8ed26a582e82309a98ecdc4f6e1c99418430ac05682c9e91d"
+    },
+    "test-driven-development": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "computedHash": "126f1ebf6ccd414f42544f6e83d8cc5adb089e1108eaffb7c400701e37eecd9f"
+    },
+    "testing": {
+      "source": "local",
+      "sourceType": "local",
+      "computedHash": "local"
+    },
+    "two-factor-authentication-best-practices": {
+      "source": "better-auth/skills",
+      "sourceType": "github",
+      "computedHash": "c4f3a299c62c1985b774b7c28e53b7e55c565dbf973fd52b08899e4bcfffa3f9"
+    },
+    "typescript": {
+      "source": "lobehub/lobehub",
+      "sourceType": "github",
+      "computedHash": "88d247797eef607f1ecf542fb8175a81118fbb7a88a1e5dc23f7a1101f245a3f"
+    },
+    "typescript-advanced-types": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "ee8377c523a911be41c31037b477805773ca5ab5ade181e44ca7dd3cd8df6692"
+    },
+    "using-git-worktrees": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "computedHash": "52bbb4b6e80918e83e92a1514f3b3757712154c2a8a42de24919e48a794c54fc"
+    },
+    "verification-before-completion": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "computedHash": "9b446f0c7fe1cfb560b1d34439523b1a76d5f177290007b2c053a1c749a4a8ba"
+    },
+    "verification-loop": {
+      "source": "affaan-m/everything-claude-code",
+      "sourceType": "github",
+      "computedHash": "c936d8f1c28920133a6dd6b4c70e9784315f64f71b8d8bb69e61fa8e044cb175"
+    },
+    "webapp-testing": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "5a6a18c0137cfbabec058e86fc1c8f6919d846a7b2a34ee978cc8ced866ee2e5"
+    },
+    "writing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "computedHash": "bfaed11054ad8021c66860244e2d2e0d1eca483ae9f5fbfcb956e99c61f5c3d7"
+    },
+    "writing-skills": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "computedHash": "b0e3065034610df41b9119445b5fd052042752bb3e598ca66aea2403a7c7685e"
+    }
+  }
+}
