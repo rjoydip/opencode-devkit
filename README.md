@@ -25,17 +25,17 @@ opencode-devkit/
 
 ## Available Agents
 
-| Agent                 | Purpose                       |
-|-----------------------|-------------------------------|
-| architect             | System architecture design    |
-| build-error-resolver  | Fix build errors              |
-| database-reviewer     | Database optimization         |
-| doc-updater           | Documentation updates         |
-| planner               | Implementation planning       |
-| refactor-cleaner      | Dead code cleanup             |
-| rust-build-resolver   | Rust build errors             |
-| rust-reviewer         | Rust code review              |
-| security-reviewer     | Security analysis             |
+| Agent                | Purpose                    |
+| -------------------- | -------------------------- |
+| architect            | System architecture design |
+| build-error-resolver | Fix build errors           |
+| database-reviewer    | Database optimization      |
+| doc-updater          | Documentation updates      |
+| planner              | Implementation planning    |
+| refactor-cleaner     | Dead code cleanup          |
+| rust-build-resolver  | Rust build errors          |
+| rust-reviewer        | Rust code review           |
+| security-reviewer    | Security analysis          |
 
 ## Available Skills (44 total)
 

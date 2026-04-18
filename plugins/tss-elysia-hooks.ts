@@ -148,7 +148,10 @@ export const TEHooksPlugin = async ({ client, $, directory, worktree }: PluginIn
         input.tool === "bash" &&
         input.args?.toString().includes("git push")
       ) {
-        log("info", "[OpenCode Devkit] Remember to review changes before pushing: git diff origin/main...HEAD");
+        log(
+          "info",
+          "[OpenCode Devkit] Remember to review changes before pushing: git diff origin/main...HEAD",
+        );
       }
 
       // Block creation of unnecessary documentation files
@@ -166,7 +169,10 @@ export const TEHooksPlugin = async ({ client, $, directory, worktree }: PluginIn
           !filePath.includes("LICENSE") &&
           !filePath.includes("CONTRIBUTING")
         ) {
-          log("warn", `[OpenCode Devkit] Creating ${filePath} - consider if this documentation is necessary`);
+          log(
+            "warn",
+            `[OpenCode Devkit] Creating ${filePath} - consider if this documentation is necessary`,
+          );
         }
       }
 
@@ -177,7 +183,10 @@ export const TEHooksPlugin = async ({ client, $, directory, worktree }: PluginIn
           cmd.match(/^(npm|pnpm|yarn|bun)\s+(install|build|test|run)/) ||
           cmd.match(/^cargo\s+(build|test|run)/)
         ) {
-          log("info", "[OpenCode Devkit] Long-running command detected - consider using background execution");
+          log(
+            "info",
+            "[OpenCode Devkit] Long-running command detected - consider using background execution",
+          );
         }
       }
     },

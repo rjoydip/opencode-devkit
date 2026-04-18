@@ -18,6 +18,15 @@
     "isolatedModules": true,
     "types": ["node"]
   },
-  "include": ["plugins/**/*.ts", "tools/**/*.ts", "index.ts", "commands/**/*.md", "rules/**/*.md", "agents/**/*.md", "*.ts", "*.json"],
+  "include": [
+    "plugins/**/*.ts",
+    "tools/**/*.ts",
+    "index.ts",
+    "commands/**/*.md",
+    "rules/**/*.md",
+    "agents/**/*.md",
+    "*.ts",
+    "*.json"
+  ],
   "exclude": ["node_modules", "dist"]
 }

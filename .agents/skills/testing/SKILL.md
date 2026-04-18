@@ -62,10 +62,10 @@ test("user can search and view market", async ({ page }) => {
   await page.goto("/");
   await page.fill('input[placeholder="Search"]', "election");
   await page.waitForTimeout(600);
-  
+
   const results = page.locator('[data-testid="market-card"]');
   await expect(results).toHaveCount(5);
-  
+
   await results.first().click();
   await expect(page).toHaveURL(/\/markets\//);
 });
@@ -125,9 +125,7 @@ export default defineConfig({
     trace: "on-first-retry",
     screenshot: "only-on-failure",
   },
-  projects: [
-    { name: "chromium", use: { ...devices["Desktop Chrome"] } },
-  ],
+  projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
 });
 ```
 

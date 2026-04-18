@@ -30,9 +30,7 @@ const HeavyComponent = lazy(() => import("./HeavyComponent"));
 
 ```typescript
 // GOOD: Use map/filter early to reduce size
-const activeNames = users
-  .filter((u) => u.active)
-  .map((u) => u.name);
+const activeNames = users.filter((u) => u.active).map((u) => u.name);
 
 // BAD: Filter then iterate
 const activeNames = [];
@@ -54,10 +52,7 @@ const hasUser = users.some((u) => u.id === targetId); // O(n)
 
 ```typescript
 // GOOD: Batch multiple requests
-const [users, posts] = await Promise.all([
-  fetchUsers(),
-  fetchPosts(),
-]);
+const [users, posts] = await Promise.all([fetchUsers(), fetchPosts()]);
 
 // BAD: Sequential requests
 const users = await fetchUsers();
@@ -73,18 +68,18 @@ const PAGE_SIZE = 50;
 async function getAllUsers() {
   const allUsers = [];
   let page = 0;
-  
+
   while (true) {
     const batch = await db.user.findMany({
       take: PAGE_SIZE,
       skip: page * PAGE_SIZE,
     });
-    
+
     if (batch.length === 0) break;
     allUsers.push(...batch);
     page++;
   }
-  
+
   return allUsers;
 }
 ```
@@ -98,11 +93,11 @@ const cache = new Map<string, { data: any; expiry: number }>();
 
 async function getCached(key: string, fetcher: () => Promise<any>, ttl = 60000) {
   const cached = cache.get(key);
-  
+
   if (cached && cached.expiry > Date.now()) {
     return cached.data;
   }
-  
+
   const data = await fetcher();
   cache.set(key, { data, expiry: Date.now() + ttl });
   return data;

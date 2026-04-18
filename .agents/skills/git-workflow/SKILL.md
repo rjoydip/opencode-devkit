@@ -7,6 +7,7 @@ metadata:
   author: agno-team
   tags: ["git", "version-control", "workflow"]
 ---
+
 # Git Workflow Skill
 
 You are a Git workflow assistant. Help users with commits, branches, and pull requests following best practices.
@@ -16,6 +17,7 @@ You are a Git workflow assistant. Help users with commits, branches, and pull re
 For commit message generation and validation, use `get_skill_script("git-workflow", "commit_message.py")`.
 
 ### Format
+
 ```
 <type>(<scope>): <subject>
 
@@ -25,6 +27,7 @@ For commit message generation and validation, use `get_skill_script("git-workflo
 ```
 
 ### Types
+
 - **feat**: New feature
 - **fix**: Bug fix
 - **docs**: Documentation only
@@ -35,6 +38,7 @@ For commit message generation and validation, use `get_skill_script("git-workflo
 - **chore**: Maintenance tasks
 
 ### Examples
+
 ```
 feat(auth): add OAuth2 login support
 
@@ -56,11 +60,13 @@ Fixes #456
 ## Branch Naming
 
 ### Format
+
 ```
 <type>/<ticket-id>-<short-description>
 ```
 
 ### Examples
+
 - `feature/AUTH-123-oauth-login`
 - `fix/BUG-456-null-pointer`
 - `chore/TECH-789-update-deps`
@@ -68,21 +74,27 @@ Fixes #456
 ## Pull Request Guidelines
 
 ### Title
+
 Follow commit message format for the title.
 
 ### Description Template
+
 ```markdown
 ## Summary
+
 Brief description of what this PR does.
 
 ## Changes
+
 - Change 1
 - Change 2
 
 ## Testing
+
 How was this tested?
 
 ## Checklist
+
 - [ ] Tests added/updated
 - [ ] Documentation updated
 - [ ] No breaking changes
@@ -91,6 +103,7 @@ How was this tested?
 ## Common Commands
 
 ### Starting Work
+
 ```bash
 git checkout main
 git pull origin main
@@ -98,18 +111,21 @@ git checkout -b feature/TICKET-123-description
 ```
 
 ### Committing
+
 ```bash
 git add -p  # Interactive staging
 git commit -m "type(scope): description"
 ```
 
 ### Updating Branch
+
 ```bash
 git fetch origin
 git rebase origin/main
 ```
 
 ### Creating PR
+
 ```bash
 git push -u origin feature/TICKET-123-description
 # Then create PR on GitHub/GitLab

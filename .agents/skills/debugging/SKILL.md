@@ -54,7 +54,7 @@ class AppError extends Error {
   constructor(
     message: string,
     public code: string,
-    public statusCode: number = 500
+    public statusCode: number = 500,
   ) {
     super(message);
     this.name = "AppError";
@@ -148,13 +148,13 @@ const handleClick = async () => {
 ```typescript
 // Problem: not cleaning up subscriptions
 useEffect(() => {
-  const subscription = api.subscribe(data => setData(data));
+  const subscription = api.subscribe((data) => setData(data));
   // Missing cleanup!
 }, []);
 
 // Solution: return cleanup function
 useEffect(() => {
-  const subscription = api.subscribe(data => setData(data));
+  const subscription = api.subscribe((data) => setData(data));
   return () => subscription.unsubscribe();
 }, []);
 ```

@@ -6,6 +6,11 @@
       "sourceType": "github",
       "computedHash": "2e4e5f287312022d491b5465ec9511638253b4e872109d083dcde117b5caaa3d"
     },
+    "analyze-logs": {
+      "source": "evlog.dev",
+      "sourceType": "well-known",
+      "computedHash": "28bd8254997b767ebba1f7f2cf4567ddb6c51b1fcdca9baf9b9cd7ee3ca51d7c"
+    },
     "api-design": {
       "source": "affaan-m/everything-claude-code",
       "sourceType": "github",
@@ -180,6 +185,11 @@
       "source": "obra/superpowers",
       "sourceType": "github",
       "computedHash": "246e65cd72a7e360987d94e6c61564ce6d71c6361d1784d529d70e4cbbe8522d"
+    },
+    "review-logging-patterns": {
+      "source": "evlog.dev",
+      "sourceType": "well-known",
+      "computedHash": "16ec9091a37cfce1089d137da6c4d2997d771a8eb914a952df7654afbcdd1f36"
     },
     "security": {
       "source": "local",

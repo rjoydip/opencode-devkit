@@ -27,11 +27,7 @@ const isValid = await verify(hashedPassword, password);
 
 ```typescript
 // Sign tokens with expiry
-const token = await jwt.sign(
-  { userId: user.id },
-  process.env.JWT_SECRET!,
-  { expiresIn: "7d" }
-);
+const token = await jwt.sign({ userId: user.id }, process.env.JWT_SECRET!, { expiresIn: "7d" });
 
 // Verify tokens
 try {
@@ -60,15 +56,10 @@ const validated = UserSchema.parse(input);
 
 ```typescript
 // GOOD: Parameterized queries
-const user = await db.query(
-  "SELECT * FROM users WHERE email = $1",
-  [email]
-);
+const user = await db.query("SELECT * FROM users WHERE email = $1", [email]);
 
 // BAD: String concatenation
-const user = await db.query(
-  "SELECT * FROM users WHERE email = '" + email + "'"
-);
+const user = await db.query("SELECT * FROM users WHERE email = '" + email + "'");
 ```
 
 ## XSS Prevention
@@ -126,7 +117,7 @@ app.use(
   cors({
     origin: process.env.ALLOWED_ORIGIN,
     credentials: true,
-  })
+  }),
 );
 ```
 
@@ -145,11 +136,11 @@ app.use(
 
 ## Common Vulnerabilities
 
-| Vulnerability | Prevention |
-|--------------|------------|
-| SQL Injection | Parameterized queries |
-| XSS | Escape HTML, sanitize input |
-| CSRF | CSRF tokens |
-| IDOR | Authorization checks |
-| Command Injection | Avoid exec with user input |
-| Path Traversal | Validate file paths |
+| Vulnerability     | Prevention                  |
+| ----------------- | --------------------------- |
+| SQL Injection     | Parameterized queries       |
+| XSS               | Escape HTML, sanitize input |
+| CSRF              | CSRF tokens                 |
+| IDOR              | Authorization checks        |
+| Command Injection | Avoid exec with user input  |
+| Path Traversal    | Validate file paths         |

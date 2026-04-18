@@ -13,6 +13,7 @@ Core rules and guidelines for OpenCode projects.
 - CSRF protection enabled
 
 **If security issue found:**
+
 1. STOP immediately
 2. Use **security-reviewer** agent
 3. Fix CRITICAL issues before continuing
@@ -77,18 +78,18 @@ Types: feat, fix, refactor, docs, test, chore, perf, ci
 
 ## Agent Orchestration
 
-| Agent | Purpose | When to Use |
-|-------|---------|-------------|
-| planner | Implementation planning | Complex features |
-| architect | System design | Architectural decisions |
-| tdd-guide | Test-driven development | New features, bug fixes |
-| code-reviewer | Code review | After writing code |
-| security-reviewer | Security analysis | Before commits |
-| build-error-resolver | Fix build errors | When build fails |
-| e2e-runner | E2E testing | Critical user flows |
-| refactor-cleaner | Dead code cleanup | Code maintenance |
-| doc-updater | Documentation | Updating docs |
-| database-reviewer | Database optimization | SQL, schema design |
+| Agent                | Purpose                 | When to Use             |
+| -------------------- | ----------------------- | ----------------------- |
+| planner              | Implementation planning | Complex features        |
+| architect            | System design           | Architectural decisions |
+| tdd-guide            | Test-driven development | New features, bug fixes |
+| code-reviewer        | Code review             | After writing code      |
+| security-reviewer    | Security analysis       | Before commits          |
+| build-error-resolver | Fix build errors        | When build fails        |
+| e2e-runner           | E2E testing             | Critical user flows     |
+| refactor-cleaner     | Dead code cleanup       | Code maintenance        |
+| doc-updater          | Documentation           | Updating docs           |
+| database-reviewer    | Database optimization   | SQL, schema design      |
 
 > **Refer to:** `AGENTS.md` for full agent documentation
 
@@ -98,23 +99,23 @@ Types: feat, fix, refactor, docs, test, chore, perf, ci
 
 Skills are loaded from `.agents/skills/`:
 
-| Skill | Description |
-|-------|-------------|
-| coding-standards | Code quality, TypeScript patterns |
-| testing | TDD, E2E, Playwright patterns |
-| frontend-patterns | React, state management |
-| backend-patterns | Server patterns, APIs |
-| api-design | REST API design |
-| e2e-testing | Playwright patterns |
-| expect | Adversarial browser testing |
-| bun-runtime | Bun-specific patterns |
-| mcp-server-patterns | MCP server development |
-| organization-best-practices | Project organization |
-| better-auth-best-practices | Authentication patterns |
-| two-factor-authentication | 2FA implementation |
-| email-and-password | Email/password auth |
-| create-auth-skill | Building auth skills |
-| verification-loop | Verification patterns |
+| Skill                       | Description                       |
+| --------------------------- | --------------------------------- |
+| coding-standards            | Code quality, TypeScript patterns |
+| testing                     | TDD, E2E, Playwright patterns     |
+| frontend-patterns           | React, state management           |
+| backend-patterns            | Server patterns, APIs             |
+| api-design                  | REST API design                   |
+| e2e-testing                 | Playwright patterns               |
+| expect                      | Adversarial browser testing       |
+| bun-runtime                 | Bun-specific patterns             |
+| mcp-server-patterns         | MCP server development            |
+| organization-best-practices | Project organization              |
+| better-auth-best-practices  | Authentication patterns           |
+| two-factor-authentication   | 2FA implementation                |
+| email-and-password          | Email/password auth               |
+| create-auth-skill           | Building auth skills              |
+| verification-loop           | Verification patterns             |
 
 ---
 

@@ -226,8 +226,7 @@ await expect(page.getByRole("button", { name: "Submit" })).toBeEnabled();
 
 // Wait for API response
 const responsePromise = page.waitForResponse(
-  (response) =>
-    response.url().includes("/api/users") && response.status() === 200,
+  (response) => response.url().includes("/api/users") && response.status() === 200,
 );
 await page.getByRole("button", { name: "Load Users" }).click();
 const response = await responsePromise;

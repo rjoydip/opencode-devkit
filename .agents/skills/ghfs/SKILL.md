@@ -14,6 +14,7 @@ Use this skill to operate ghfs as a local filesystem mirror for GitHub issues an
 - Default execute mode is report mode. Use `--run` to mutate GitHub.
 
 Key `.ghfs` files:
+
 - `execute.md`: queued commands (human-friendly)
 - `execute.yml`: queued operations (YAML array)
 - `schema/execute.schema.json`: schema for `execute.yml`
@@ -33,6 +34,7 @@ Key `.ghfs` files:
 5. Report results and remaining queued operations.
 
 Execution behavior to remember:
+
 - Merge order is `execute.yml` -> `execute.md` -> per-item generated operations.
 - Operations run in file order.
 - On `--run`, successful operations are removed from queued YAML/MD sources; failed and not-yet-run entries remain.
@@ -53,11 +55,13 @@ close-comment #127 "Closing as completed"
 ```
 
 Rules:
+
 - Action names are case-insensitive and aliases are accepted.
 - `#` and `//` line comments plus `<!-- ... -->` HTML comment blocks are supported and preserved.
 - Multi-target commands are supported for: `close`, `reopen`, `clear-milestone`, `unlock`, `mark-ready-for-review`, `convert-to-draft`.
 
 Common aliases:
+
 - `open` -> `reopen`
 - `closes` -> `close`
 - `close-comment` / `comment-close` / `close-and-comment` / `comment-and-close` -> `close-with-comment`
@@ -85,26 +89,27 @@ Keep root as a YAML array and include `number` + `action` for each entry.
 - number: 126
   action: request-reviewers
   reviewers: [octocat]
-  ifUnchangedSince: '2026-03-05T04:10:00Z'
+  ifUnchangedSince: "2026-03-05T04:10:00Z"
 ```
 
 Map user intent to action fields:
 
-| User intent | action | Required extra fields |
-| --- | --- | --- |
-| Close / reopen | `close`, `reopen` | none |
-| Change title | `set-title` | `title` |
-| Replace body | `set-body` | `body` |
-| Add comment | `add-comment` | `body` |
-| Close with comment | `close-with-comment` | `body` |
-| Add/remove/set labels | `add-labels`, `remove-labels`, `set-labels` | `labels` (non-empty string array) |
+| User intent              | action                                               | Required extra fields                |
+| ------------------------ | ---------------------------------------------------- | ------------------------------------ |
+| Close / reopen           | `close`, `reopen`                                    | none                                 |
+| Change title             | `set-title`                                          | `title`                              |
+| Replace body             | `set-body`                                           | `body`                               |
+| Add comment              | `add-comment`                                        | `body`                               |
+| Close with comment       | `close-with-comment`                                 | `body`                               |
+| Add/remove/set labels    | `add-labels`, `remove-labels`, `set-labels`          | `labels` (non-empty string array)    |
 | Add/remove/set assignees | `add-assignees`, `remove-assignees`, `set-assignees` | `assignees` (non-empty string array) |
-| Set/clear milestone | `set-milestone`, `clear-milestone` | `milestone` for set |
-| Lock/unlock conversation | `lock`, `unlock` | optional `reason` for lock |
-| PR reviewer actions | `request-reviewers`, `remove-reviewers` | `reviewers` (non-empty string array) |
-| PR draft state | `mark-ready-for-review`, `convert-to-draft` | none |
+| Set/clear milestone      | `set-milestone`, `clear-milestone`                   | `milestone` for set                  |
+| Lock/unlock conversation | `lock`, `unlock`                                     | optional `reason` for lock           |
+| PR reviewer actions      | `request-reviewers`, `remove-reviewers`              | `reviewers` (non-empty string array) |
+| PR draft state           | `mark-ready-for-review`, `convert-to-draft`          | none                                 |
 
 Rules:
+
 - `number` must be a positive integer.
 - `ifUnchangedSince` must be ISO datetime when present.
 - `request-reviewers`, `remove-reviewers`, `mark-ready-for-review`, and `convert-to-draft` are PR-only.
@@ -112,12 +117,14 @@ Rules:
 - Append operations unless user explicitly asks to replace or clear the queue.
 
 Practical number resolution:
+
 - Parse from filenames such as `.ghfs/issues/00123-foo.md` -> `number: 123`.
 - Use `.ghfs/issues.md` / `.ghfs/pulls.md` when matching by title.
 
 ## Update Per-Item Markdown Frontmatter
 
 Edit frontmatter in `.ghfs/issues/**/*.md` or `.ghfs/pulls/**/*.md`:
+
 - `title`
 - `state` (`open` / `closed`)
 - `labels`
@@ -139,6 +146,7 @@ ghfs execute --run
 ```
 
 Useful flags:
+
 - `--repo owner/name` when repo cannot be auto-resolved.
 - `--non-interactive` for scripted runs.
 - `--continue-on-error` to keep applying later ops after a failure.
