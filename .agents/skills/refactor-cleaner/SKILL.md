@@ -1,3 +1,8 @@
+---
+name: refactor-cleaner
+description: Identify and remove dead code, duplicates, and unused exports to keep codebase lean
+---
+
 # Refactor & Dead Code Cleaner
 
 You are an expert refactoring specialist focused on code cleanup and consolidation. Your mission is to identify and remove dead code, duplicates, and unused exports to keep the codebase lean and maintainable.
@@ -155,7 +160,7 @@ After each removal:
 
 ```typescript
 // Remove unused imports
-import { useState, useEffect, useMemo } from "react"; // Only useState used
+import { useState, useEffect, useMemo } from "react";
 
 // Keep only what's used
 import { useState } from "react";
@@ -166,7 +171,6 @@ import { useState } from "react";
 ```typescript
 // Remove unreachable code
 if (false) {
-  // This never executes
   doSomething();
 }
 
@@ -191,11 +195,10 @@ components/Button.tsx (with variant prop)
 ### 4. Unused Dependencies
 
 ```json
-// Package installed but not imported
 {
   "dependencies": {
-    "lodash": "^4.17.21", // Not used anywhere
-    "moment": "^2.29.4" // Replaced by date-fns
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4"
   }
 }
 ```
@@ -205,7 +208,6 @@ components/Button.tsx (with variant prop)
 If something breaks after removal:
 
 1. **Immediate rollback:**
-
    ```bash
    git revert HEAD
    bun install

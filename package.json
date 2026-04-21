@@ -8,8 +8,7 @@
     "automation",
     "developer-tools",
     "hooks",
-    "opencode",
-    "tss-elysia"
+    "opencode"
   ],
   "license": "MIT",
   "files": [
@@ -29,6 +28,7 @@
     "access": "public"
   },
   "scripts": {
+    "postinstall": "./scripts/install-global-pkgs.sh",
     "build": "tsdown",
     "dev": "tsdown --watch",
     "clean": "rm -rf dist",

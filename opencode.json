@@ -8,6 +8,7 @@
   "plugin": [
     "./plugins",
     "@franlol/opencode-md-table-formatter@latest",
+    "context-mode",
     "opencode-helicone-session",
     "opencode-pty",
     "opencode-vibeguard"
@@ -29,6 +30,10 @@
     "sqlite": {
       "type": "local",
       "command": ["bunx", "-y", "sqlite-mcp-server"]
+    },
+    "context-mode": {
+      "type": "local",
+      "command": ["context-mode"]
     }
   },
   "lsp": {
