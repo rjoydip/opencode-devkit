@@ -6,6 +6,12 @@
       "sourceType": "github",
       "computedHash": "2e4e5f287312022d491b5465ec9511638253b4e872109d083dcde117b5caaa3d"
     },
+    "agentaudit-skill": {
+      "source": "agentaudit-dev/agentaudit-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "6c3538228d38516ffeb0d3d02f43b5b8024943de2d62552aa7598833d0dd306e"
+    },
     "analyze-logs": {
       "source": "evlog.dev",
       "sourceType": "well-known",
